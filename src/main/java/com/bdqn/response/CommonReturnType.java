@@ -15,7 +15,6 @@ public class CommonReturnType {
     //若status=fail,则data内返回通用的错误码格式（已在其他类或接口中定义）
     private Object data;
 
-
     public String getStatus() {
         return status;
     }

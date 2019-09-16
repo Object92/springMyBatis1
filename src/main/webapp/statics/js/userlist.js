@@ -77,13 +77,13 @@ $(function () {
         openYesOrNoDLG();
     });
 
-    /*$(".deleteUser").on("click",function(){
+  /*  $(".deleteUser").on("click",function(){
         var obj = $(this);
         if(confirm("你确定要删除用户【"+obj.attr("username")+"】吗？")){
             $.ajax({
                 type:"GET",
-                url:path+"/jsp/user.do",
-                data:{method:"deluser",uid:obj.attr("userid")},
+                url:path+"/ssm/user/delUser",
+                data:{method:"deluser", uid:obj.attr("userid")},
                 dataType:"json",
                 success:function(data){
                     if(data.delResult == "true"){//删除成功：移除删除行

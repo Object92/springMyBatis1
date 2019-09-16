@@ -60,7 +60,6 @@ public class UserController {
     @GetMapping("/userListJson")
     @ResponseBody
     public Object getUserList() throws Exception {
-
         List<User> userList;
         userList = userService.findUsers();
         if (userList.size() == 0) {
@@ -115,7 +114,6 @@ public class UserController {
     @ResponseBody
     public Object getUserByCode(@RequestParam(value = "userCode") String userCode) throws Exception {
         User user = userService.findUsersByCode(userCode);
-
         if (user == null) {
 //            throw new BusinessException(EmBusinessError.USER_NOT_EXIST);
             return CommonReturnType.create(20001, "fail");
@@ -158,13 +156,13 @@ public class UserController {
     }
 
 
-    /**
-     * description: TODO   新增用户的处理（包含用户图片的上传）
-     * create time: 2019/9/8 20:32
-     * [session, request, user, attachs]
-     *
-     * @return java.lang.String
-     */
+        /**
+         * description: TODO   新增用户的处理（包含用户图片的上传）
+         * create time: 2019/9/8 20:32
+         * [session, request, user, attachs]
+         *
+         * @return java.lang.String
+         */
     @PostMapping(value = "doUseraddMulti")
     public String doUseraddMulti(HttpSession session,
                                  HttpServletRequest request,
@@ -179,20 +177,20 @@ public class UserController {
         user.setCreationDate(new Date());
 //        获取上传文件到指定目录的路径
 //        String path = request.getSession().getServletContext().getRealPath("statics" + File.separator + "uploadfiles");
-        String path = "D:\\javaWorkSpace\\springMyBatis\\src\\main\\webapp\\uploadfiles";
+        String path = "F:\\Xiaomi\\springMyBatis\\src\\main\\webapp\\uploadfiles";
         for (int i = 0; i < attachs.length; i++) {
             MultipartFile attach = attachs[i];
-            if (!attach.isEmpty()) {
-                if (i == 0) {
-                    errorInfo = "uploadFileError";
-                } else if (i == 1) {
-                    errorInfo = "uploadWpError";
-                }
+                if (!attach.isEmpty()) {
+                    if (i == 0) {
+                        errorInfo = "uploadFileError";
+                    } else if (i == 1) {
+                        errorInfo = "uploadWpError";
+                    }
                 String oldFileName = attach.getOriginalFilename();//原文件名
                 String prefix = FilenameUtils.getExtension(oldFileName);//原文件后缀
-                int filesize = 512000;
+                int filesize = 512000000;
                 if (attach.getSize() > filesize) {
-                    request.setAttribute(errorInfo, " * 上传大小不得超过 500k");
+                    request.setAttribute(errorInfo, " * 上传大小不得超过 500000000k");
                     flag1 = false;
                 } else if (prefix.equalsIgnoreCase("jpg") || prefix.equalsIgnoreCase("png")
                         || prefix.equalsIgnoreCase("jpeg") || prefix.equalsIgnoreCase("pneg")) {//上传图片格式不正确
@@ -240,17 +238,16 @@ public class UserController {
      * description: TODO
      * create time: 2019/9/8 20:32
      * [userId, model]
-     *
      * @return java.lang.String
      */
     @GetMapping(value = "/viewUser/{userid}")
     public String viewUser(@PathVariable(value = "userid") Integer userId, Model model) throws BusinessException {
         //调取相应Model 业务逻辑数据
-        User user = userService.findUserById(userId);
+        User user=userService.findUserById(userId);
         //        需要将UserModel转换成UserVO（供用户来查看的信息）
-        UserVO userVO = convertFromModel(user);
-        model.addAttribute("user", user);
-        return "user/userView";
+        UserVO userVO=convertFromModel(user);
+        model.addAttribute("user",user);
+        return"user/userView";
     }
 
     /**
@@ -264,7 +261,6 @@ public class UserController {
     public String modifyUser(@PathVariable(value = "userid") Integer userId, Model model) throws BusinessException {
         //调取相应Model 业务逻辑数据
         User user = userService.findUserById(userId);
-
         //        需要将UserModel转换成UserVO（供用户来查看的信息）
         UserVO userVO = convertFromModel(user);
         model.addAttribute("user", user);
@@ -302,7 +298,6 @@ public class UserController {
     @GetMapping(value = "/delUser/{userid}")
     @ResponseBody
     public Object delUser(@PathVariable(value = "userid") Integer userId) throws BusinessException {
-
         int result = 0;
         User user=userService.findUserById(userId);
         if (user!=null){
@@ -312,7 +307,6 @@ public class UserController {
         }else {
             return CommonReturnType.create("notexist","fail");
         }
-
     }
 }
 

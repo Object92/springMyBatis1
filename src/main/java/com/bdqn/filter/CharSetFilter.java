@@ -10,6 +10,7 @@ public class CharSetFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+        //三大组件 servicet 过滤器 监听器
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         chain.doFilter(req, resp);
