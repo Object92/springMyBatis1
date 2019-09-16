@@ -13,4 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/bill")
 public class BillController {
+    public static void main(String[] args) {
+        System.out.println("helloword");
+    }
 }
