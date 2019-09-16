@@ -17,7 +17,6 @@
       <change afterPath="$PROJECT_DIR$/out/artifacts/springMyBatis_war_exploded/statics/css/fontawesome-all.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/springMyBatis_war_exploded/statics/css/style1.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/springMyBatis_war_exploded/statics/images/b8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bdqn/controller/BillController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/META-INF/springMyBatis.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/bdqn/exception/BusinessExcpetion.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/bdqn/exception/EnumBusinessError.class" afterDir="false" />
@@ -90,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bdqn/controller/BillController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="268">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -269,6 +268,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -406,7 +406,7 @@
       <workItem from="1568168059636" duration="348000" />
       <workItem from="1568168471069" duration="10000" />
       <workItem from="1568189445427" duration="4785000" />
-      <workItem from="1568613380827" duration="3160000" />
+      <workItem from="1568613380827" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交。完成的使用户模块中的查看增删功能">
       <created>1568615377340</created>
@@ -415,17 +415,23 @@
       <option name="project" value="LOCAL" />
       <updated>1568615377340</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成了控制器的编写">
+      <created>1568616932363</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568616932363</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43406000" />
+    <option name="totallyTimeSpent" value="44013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22453083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22453083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -448,7 +454,7 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5226629" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.25779036" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -537,7 +543,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交。完成的使用户模块中的查看增删功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交。完成的使用户模块中的查看增删功能" />
+    <MESSAGE value="完成了控制器的编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了控制器的编写" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bdqn/dao/RoleMapper.java">
@@ -870,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bdqn/controller/BillController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="268">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
